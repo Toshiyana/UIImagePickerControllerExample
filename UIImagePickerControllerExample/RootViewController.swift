@@ -6,7 +6,7 @@
 //  Copyright © 2019 Alex Nagy. All rights reserved.
 //
 
-//import UIKit
+// TinyConstraintsはAutolayoutをコードで行うフレームワーク(UIKitも含まれっているっぽいからimport UIKitする必要ない)
 import TinyConstraints
 
 class RootViewController: UIViewController {
@@ -90,8 +90,6 @@ extension RootViewController: UIImagePickerControllerDelegate, UINavigationContr
         } else if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             self.profileImageView.image = originalImage.withRenderingMode(.alwaysOriginal)
         }
-        dismiss(animated: true, completion: nil)
+        picker.dismiss(animated: true, completion: nil)
     }
 }
-
-
